@@ -178,7 +178,7 @@ export function TypingTest() {
               <span>{activeLevel.description}</span>
               <b>Target: {activeLevel.target} · {sentence.split(' ').length} words</b>
             </div>
-            <p className="prompt-hint">Pick a level based on how much typing data you want to give the judge.</p>
+            <p className="prompt-hint">Choose your challenge. Longer prompts give the judge more data.</p>
             <div className="level-picker" aria-label="Typing levels">
               <span className="level-label">LEVEL</span>
               {[['easy', 'Warm-up · short'], ['medium', 'Main character · long'], ['hard', 'Boss fight · epic']].map(([id, label]) => <button key={id} type="button" className={`level-chip ${level === id ? 'active' : ''}`} onClick={() => { setLevel(id); setSentence(getSentenceForMode(mode, id)); setTyped(''); setStartTime(null); setTimeSeconds(0); setIsComplete(false); }}>{label}</button>)}
