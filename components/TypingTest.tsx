@@ -12,16 +12,21 @@ import { PersonalityResult } from './PersonalityResult';
 export function TypingTest() {
   const [mode, setMode] = useState('classic');
   const [level, setLevel] = useState('medium');
+  const levelConfig = {
+    easy: { label: 'WARM-UP', description: 'Short prompt. Learn the rhythm.', target: '20+ WPM', length: 1 },
+    medium: { label: 'MAIN CHARACTER', description: 'A proper paragraph for a real read.', target: '35+ WPM', length: 3 },
+    hard: { label: 'BOSS FIGHT', description: 'An extended passage. Accuracy under pressure.', target: '55+ WPM', length: 5 },
+  } as const;
+  const activeLevel = levelConfig[level as keyof typeof levelConfig];
   const [sentence, setSentence] = useState<string>('');
   const getSentenceForMode = (nextMode = mode, nextLevel = level) => {
     if (nextMode === 'classic') {
       if (nextLevel === 'easy') return getRandomSentence(MAIN_SENTENCES.slice(0, 12));
-      const longPrompt = getRandomSentence(LONG_SENTENCES);
-      return nextLevel === 'hard' ? `${longPrompt} ${getRandomSentence(LONG_SENTENCES)}` : longPrompt;
+      return Array.from({ length: levelConfig[nextLevel as keyof typeof levelConfig].length }, () => getRandomSentence(LONG_SENTENCES)).join(' ');
     }
     const pool = nextMode === 'speed' ? SPEED_MODE_SENTENCES : nextMode === 'zen' ? ZEN_MODE_SENTENCES : nextMode === 'chaos' ? CHAOS_MODE_SENTENCES : nextMode === 'meme' ? MEME_MODE_SENTENCES : MAIN_SENTENCES;
-    const base = getRandomSentence(pool);
-    return nextLevel === 'hard' && nextMode !== 'speed' ? `${base} ${getRandomSentence(pool)}` : base;
+    const count = nextLevel === 'easy' ? 1 : nextLevel === 'medium' ? 2 : 4;
+    return Array.from({ length: count }, () => getRandomSentence(pool)).join(' ');
   };
   const [typed, setTyped] = useState<string>('');
   const [startTime, setStartTime] = useState<number | null>(null);
@@ -168,7 +173,12 @@ export function TypingTest() {
             <div className="mode-picker" aria-label="Typing modes">
               {[['classic', 'Classic'], ['speed', 'Speed'], ['zen', 'Zen'], ['chaos', 'Chaos'], ['meme', 'Meme']].map(([id, label]) => <button key={id} type="button" className={`mode-chip ${mode === id ? 'active' : ''}`} onClick={() => { setMode(id); setSentence(getSentenceForMode(id, level)); setTyped(''); setStartTime(null); setTimeSeconds(0); setIsComplete(false); }}>{label}</button>)}
             </div>
-            <p className="prompt-hint">Longer prompts give you a better read on rhythm, accuracy, pauses, and personality.</p>
+            <div className="level-status" aria-live="polite">
+              <strong>{activeLevel.label}</strong>
+              <span>{activeLevel.description}</span>
+              <b>Target: {activeLevel.target} · {sentence.split(' ').length} words</b>
+            </div>
+            <p className="prompt-hint">Pick a level based on how much typing data you want to give the judge.</p>
             <div className="level-picker" aria-label="Typing levels">
               <span className="level-label">LEVEL</span>
               {[['easy', 'Warm-up · short'], ['medium', 'Main character · long'], ['hard', 'Boss fight · epic']].map(([id, label]) => <button key={id} type="button" className={`level-chip ${level === id ? 'active' : ''}`} onClick={() => { setLevel(id); setSentence(getSentenceForMode(mode, id)); setTyped(''); setStartTime(null); setTimeSeconds(0); setIsComplete(false); }}>{label}</button>)}
