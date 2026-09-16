@@ -21,7 +21,7 @@ export function About() {
             <p className="font-bold leading-relaxed">
               We analyze 7 key metrics: WPM, accuracy, pauses, backspaces, consistency, and more. 
               Our proprietary algorithm classifies you into one of 7 personality types. 
-              Your results are saved locally (no servers spying on you).
+              Your results are saved securely to your account so your dashboard and leaderboard stay up to date.
             </p>
           </div>
 
@@ -41,8 +41,7 @@ export function About() {
           <div className="offset-card">
             <h3 className="text-2xl font-black mb-4">PRIVACY</h3>
             <p className="font-bold leading-relaxed">
-              All your data stays on YOUR device. We don&apos;t collect, store, or sell any information. 
-              Your typing habits are yours alone. We&apos;re not reading your diary, promise.
+              Your saved attempts are tied to your account and used only for your dashboard and leaderboard. We don&apos;t sell your typing data or use it for anything outside TYPE JUDGE.
             </p>
           </div>
         </div>

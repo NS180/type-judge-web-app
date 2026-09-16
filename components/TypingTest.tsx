@@ -81,7 +81,7 @@ export function TypingTest() {
     setIsComplete(true);
     if (timerRef.current) clearInterval(timerRef.current);
 
-    const metrics = analyzeTyping(finalTyped, sentence, timeSeconds, backspaceCount, pauseEvents);
+    const metrics = analyzeTyping(finalTyped, sentence, Math.max(timeSeconds, 0.1), backspaceCount, pauseEvents);
     const personality = classifyPersonality(metrics);
     const verdictIndex = Math.floor(Math.random() * personality.verdicts.length);
     const verdict = personality.verdicts[verdictIndex];
@@ -165,6 +165,10 @@ export function TypingTest() {
             <div
               ref={inputRef}
               onKeyDown={handleKeyDown}
+              onClick={() => inputRef.current?.focus()}
+              role="textbox"
+              aria-label="Type the sentence here"
+              aria-multiline="true"
               tabIndex={0}
               className="focus:outline-none mb-6"
             >
