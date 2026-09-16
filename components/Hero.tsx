@@ -8,6 +8,7 @@ export function Hero() {
       <span className="hero-widget hero-widget-one" aria-hidden="true">100% REAL</span>
       <span className="hero-widget hero-widget-two" aria-hidden="true">TYPE VIBES</span>
       <span className="hero-widget hero-widget-three" aria-hidden="true">NO CHEATING</span>
+      <span className="hero-sticker" aria-hidden="true">WOW!</span>
       <span className="hero-doodle hidden md:block" style={{ top: '28%', left: '44%' }} aria-hidden="true">✦</span>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8 md:mb-12 px-2">

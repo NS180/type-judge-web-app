@@ -10,7 +10,7 @@ export function Navbar() {
         </div>
         
         <div className="hidden md:flex items-center gap-8">
-          <a href="#test" className="font-bold hover:underline">TEST</a>
+          <a href="#test" className="nav-pill font-bold hover:underline">TEST</a>
           <a href="#stats" className="font-bold hover:underline">STATS</a>
           <a href="#about" className="font-bold hover:underline">ABOUT</a>
         </div>

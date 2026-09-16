@@ -11,7 +11,8 @@
   --color-purple: #8d6be8;
   --color-blue: #73b9ea;
   --color-yellow: #ffd84d;
-  --color-pink: #ed78b2;
+  --color-pink: #e85b9d;
+  --color-pink-deep: #b93672;
   --color-green: #62d99a;
   --color-orange: #ff9b68;
   --color-coral: #f47f83;
@@ -73,7 +74,9 @@ body {
 .keyboard-mouth { position: absolute; top: 1.25rem; color: var(--color-pink); font-size: 2.3rem; font-weight: 900; line-height: 1; }
 .keyboard-row { display: flex; gap: 0.4rem; width: 100%; justify-content: center; }
 .keyboard-row i, .keyboard-row b { display: block; height: 1.35rem; flex: 1; max-width: 3.2rem; background: #fffdf7; border: 3px solid var(--color-black); border-radius: 0.35rem; box-shadow: 2px 2px 0 var(--color-black); }
-.keyboard-row b { flex: 2.4; background: var(--color-pink); }
+.keyboard-row b { flex: 2.4; background: var(--color-pink-deep); }
+.keyboard-row:nth-of-type(2) i:nth-child(1) { background: var(--color-orange); }
+.keyboard-row:nth-of-type(3) i:nth-child(2) { background: var(--color-green); }
 .keyboard-row:nth-of-type(2) i:nth-child(3) { background: var(--color-lilac); }
 .keyboard-row:nth-of-type(3) i:nth-child(1) { background: var(--color-blue); }
 .keyboard-mascot::after { content: 'CLICK!'; position: absolute; right: -1.9rem; bottom: -1rem; padding: 0.25rem 0.45rem; background: var(--color-pink); border: 2px solid var(--color-black); border-radius: 0.4rem; box-shadow: 2px 2px 0 var(--color-black); font-size: 0.62rem; font-weight: 900; transform: rotate(8deg); }
@@ -123,6 +126,8 @@ body {
 .hero-widget-two { bottom: 14%; left: 12%; background: var(--color-lilac); transform: rotate(-6deg); }
 .hero-widget-three { top: 58%; right: 4%; background: var(--color-green); transform: rotate(-8deg); }
 
+.navbar { background: #fffdf7; }
+
 .brand-mark {
   position: relative;
   display: grid;
@@ -131,7 +136,7 @@ body {
   height: 2.45rem;
   flex: 0 0 auto;
   color: var(--color-black);
-  background: var(--color-pink);
+  background: var(--color-pink-deep);
   border: 3px solid var(--color-black);
   border-radius: 0.7rem 0.7rem 0.7rem 0.2rem;
   box-shadow: 3px 3px 0 var(--color-black);
@@ -153,6 +158,10 @@ body {
 }
 
 .brand-name { letter-spacing: -0.04em; position: relative; }
+.nav-pill { padding: 0.45rem 0.8rem; border-radius: 999px; transition: background 160ms ease, color 160ms ease; }
+.nav-pill:hover { background: var(--color-pink); color: var(--color-black); text-decoration: none; }
+.hero-sticker { position: absolute; right: 10%; top: 10%; z-index: 2; padding: 0.7rem 0.85rem; color: var(--color-black); background: var(--color-pink); border: 3px solid var(--color-black); border-radius: 48% 52% 45% 55%; box-shadow: 4px 4px 0 var(--color-black); font-size: 0.9rem; font-weight: 950; transform: rotate(11deg); }
+@media (max-width: 640px) { .hero-sticker { display: none; } }
 .brand-name em { color: var(--color-pink); font-style: normal; }
 .brand-name::after { content: '✦'; position: absolute; right: -1rem; top: -0.75rem; color: var(--color-purple); font-size: 0.9rem; transform: rotate(14deg); }
 .navbar { box-shadow: 0 4px 0 var(--color-pink); }
