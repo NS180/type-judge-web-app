@@ -8,6 +8,7 @@ import { StatsDashboard } from '@/components/StatsDashboard'
 import { About } from '@/components/About'
 import { Footer } from '@/components/Footer'
 import { AccountPanels } from '@/components/AccountPanels'
+import { AuthGate } from '@/components/AuthGate'
 
 export default function Page() {
   const [activeSection, setActiveSection] = useState('home')
@@ -18,6 +19,7 @@ export default function Page() {
   }
 
   return (
+    <AuthGate>
     <div className="site-shell">
       <Navbar activeSection={activeSection} onNavigate={scrollTo} />
       <main>
@@ -33,5 +35,6 @@ export default function Page() {
       </main>
       <Footer />
     </div>
+    </AuthGate>
   )
 }
