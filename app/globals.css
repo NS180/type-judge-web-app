@@ -185,16 +185,6 @@ body {
 .hero-widget-three { top: 58%; right: 4%; background: var(--color-green); transform: rotate(-8deg); }
 
 .navbar { background: #fffdf7; }
-.settings-wrap { position: relative; }
-.settings-button { display: inline-flex; align-items: center; gap: .35rem; padding: .45rem .7rem; color: var(--color-black); background: var(--color-lilac); border: 3px solid var(--color-black); border-radius: 999px; box-shadow: 3px 3px 0 var(--color-black); font-size: .72rem; font-weight: 950; cursor: pointer; }
-.settings-button:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--color-black); }
-.settings-popover { position: absolute; right: 0; top: calc(100% + .75rem); z-index: 20; width: 14rem; padding: 1rem; background: #fffdf7; border: 3px solid var(--color-black); box-shadow: 5px 5px 0 var(--color-black); }
-.settings-popover strong { display: block; margin-bottom: .7rem; font-size: .8rem; }
-.settings-toggle { display: flex; align-items: center; justify-content: space-between; gap: .75rem; font-weight: 850; }
-.settings-toggle input { width: 1.2rem; height: 1.2rem; accent-color: var(--color-pink-deep); }
-.settings-popover small { display: block; margin-top: .6rem; color: #5f5868; font-size: .7rem; font-weight: 700; line-height: 1.3; }
-.calm-mode *, .calm-mode *::before, .calm-mode *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
-@media (max-width: 640px) { .settings-button { font-size: 0; padding: .5rem .6rem; } .settings-button span { font-size: 1rem; } .settings-popover { right: -.5rem; } }
 
 .brand-mark {
   position: relative;
