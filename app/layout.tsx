@@ -3,8 +3,8 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'TYPE JUDGE — What kind of typist are you?',
+  description: 'A personality test disguised as a typing test. Find out what your keystrokes say about you.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light dark',
+  colorScheme: 'light',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
+    { media: '(prefers-color-scheme: light)', color: '#f7f2e8' },
+    { media: '(prefers-color-scheme: dark)', color: '#f7f2e8' },
   ],
 }
 
