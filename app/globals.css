@@ -6,14 +6,17 @@
 
 :root {
   /* Quirky color palette */
-  --color-cream: #f5f1ed;
-  --color-black: #1a1a1a;
-  --color-purple: #7b2cbf;
-  --color-blue: #3a86ff;
-  --color-yellow: #ffd60a;
-  --color-pink: #ff006e;
-  --color-green: #06ffa5;
-  --color-orange: #ff6b35;
+  --color-cream: #fff9e8;
+  --color-black: #0b0b0b;
+  --color-purple: #8b5cf6;
+  --color-blue: #5b9df5;
+  --color-yellow: #ffd21f;
+  --color-pink: #ff6b7a;
+  --color-green: #19c95b;
+  --color-orange: #ff8a3d;
+  --color-coral: #ff6b6b;
+  --color-lilac: #cbb7ff;
+  --color-sky: #8fc7ff;
   
   /* Accent colors for personalities */
   --color-speed-demon: #FF6B6B;
@@ -30,8 +33,30 @@ html {
 }
 
 body {
-  @apply bg-white text-black font-sans;
+  @apply text-black font-sans;
+  background: var(--color-cream);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.site-shell {
+  overflow: hidden;
+  background: var(--color-cream);
+}
+
+.site-shell > main > section:nth-child(1) {
+  background: var(--color-green);
+}
+
+.site-shell > main > section:nth-child(2) {
+  background: var(--color-cream);
+}
+
+.site-shell > main > section:nth-child(3) {
+  background: var(--color-sky);
+}
+
+.site-shell > main > section:nth-child(4) {
+  background: var(--color-yellow);
 }
 
 /* Typography */
@@ -84,7 +109,7 @@ h3 {
 /* Card with offset shadow */
 .offset-card {
   @apply p-6 rounded-lg bg-white;
-  border: 3px solid var(--color-black);
+  border: 4px solid var(--color-black);
   box-shadow: 6px 6px 0px var(--color-black);
   transform: rotate(-1deg);
 }
@@ -97,7 +122,7 @@ h3 {
 /* Button styles */
 .btn-primary {
   @apply px-6 py-3 font-bold rounded-lg inline-block cursor-pointer;
-  background: var(--color-purple);
+  background: var(--color-black);
   color: white;
   border: 3px solid var(--color-black);
   box-shadow: 4px 4px 0px var(--color-black);

@@ -2,13 +2,13 @@
 
 export function Hero() {
   return (
-    <section className="py-12 md:py-20 px-4 bg-gradient-to-b from-yellow-100 to-white">
+    <section className="py-12 md:py-20 px-4 bg-[#19c95b] text-white border-b-4 border-black">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-7xl font-black mb-4 comic-outline">
             YOUR TYPING<br/>PERSONALITY AWAITS
           </h1>
-          <p className="text-xl md:text-2xl font-bold text-gray-700 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl font-bold text-white max-w-2xl mx-auto">
             Type a sentence and discover how your fingers betray your true nature.
           </p>
         </div>
