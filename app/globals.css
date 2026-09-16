@@ -47,6 +47,30 @@ body {
   background: var(--color-cream);
 }
 
+.typing-mascot {
+  display: inline-block;
+  font-size: clamp(5rem, 14vw, 10rem);
+  line-height: 0.9;
+  filter: drop-shadow(6px 8px 0 var(--color-black));
+  transform: rotate(-7deg);
+  animation: mascot-wiggle 3s ease-in-out infinite;
+}
+
+@keyframes mascot-wiggle {
+  0%, 100% { transform: rotate(-7deg) translateY(0); }
+  50% { transform: rotate(5deg) translateY(-8px); }
+}
+
+.hero-spark {
+  position: absolute;
+  color: var(--color-yellow);
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.hero-spark-one { top: 12%; left: 7%; transform: rotate(-18deg); }
+.hero-spark-two { top: 38%; right: 8%; color: var(--color-pink); transform: rotate(18deg); }
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   @apply font-bold tracking-tight;

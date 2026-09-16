@@ -2,7 +2,9 @@
 
 export function Hero() {
   return (
-    <section className="py-12 md:py-20 px-4 bg-[#5548f5] text-white border-b-4 border-black">
+    <section className="relative py-12 md:py-20 px-4 bg-[#5548f5] text-white border-b-4 border-black">
+      <span className="hero-spark hero-spark-one" aria-hidden="true">✦</span>
+      <span className="hero-spark hero-spark-two" aria-hidden="true">✶</span>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-7xl font-black mb-4 comic-outline">
@@ -27,7 +29,7 @@ export function Hero() {
           </div>
 
           <div className="flex-1 text-center">
-            <div className="text-6xl animate-bounce">⌨️</div>
+            <div className="typing-mascot" role="img" aria-label="A quirky keyboard ready to judge your typing">⌨</div>
             <p className="mt-4 font-bold text-lg">Ready to be judged?</p>
           </div>
         </div>
