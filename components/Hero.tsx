@@ -22,7 +22,7 @@ export function Hero() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-12">
           <div className="flex-1 hero-instructions">
             <div className="offset-card">
-              <div className="text-lg font-bold mb-3 bg-[#ffd21f] text-black border-2 border-black px-3 py-1 inline-block -rotate-2">HOW IT WORKS:</div>
+              <div className="text-lg font-bold mb-3 bg-[#ffd21f] text-black border-2 border-black px-3 py-1 inline-block -rotate-2">HOW IT WORKS <span className="text-[#f39bc7]">✦</span></div>
               <ol className="space-y-2 text-sm font-bold">
                 <li>1. Read the sentence carefully</li>
                 <li>2. Type it as accurately (or chaotically) as you wish</li>

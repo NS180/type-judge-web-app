@@ -5,8 +5,8 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 bg-white border-b-4 border-black">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="text-3xl font-bold">📝</div>
-          <h1 className="text-2xl font-bold">TYPE JUDGE</h1>
+          <div className="brand-mark" aria-hidden="true">⌨</div>
+          <h1 className="brand-name text-2xl font-black">TYPE <em>JUDGE</em></h1>
         </div>
         
         <div className="hidden md:flex items-center gap-8">
