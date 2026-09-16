@@ -338,6 +338,11 @@ h3 {
   box-shadow: 8px 8px 0px var(--color-black);
 }
 
+.offset-card:hover {
+  transform: rotate(-1deg) translateY(-2px);
+  box-shadow: 8px 8px 0px var(--color-black);
+}
+
 #test .offset-card {
   transform: none;
 }
@@ -522,6 +527,7 @@ h3 {
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .site-shell > main > section { overflow: hidden; }
+  .offset-card { transform: rotate(-1deg); }
   .hero-mascot-wrap { order: -1; margin-bottom: 1.5rem; }
   .hero-instructions { order: 1; }
   .offset-card { transform: none; }
