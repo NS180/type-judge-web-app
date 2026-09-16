@@ -2,7 +2,7 @@
 
 export function Hero() {
   return (
-    <section className="py-12 md:py-20 px-4 bg-[#19c95b] text-white border-b-4 border-black">
+    <section className="py-12 md:py-20 px-4 bg-[#5548f5] text-white border-b-4 border-black">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-7xl font-black mb-4 comic-outline">
@@ -16,7 +16,7 @@ export function Hero() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-12">
           <div className="flex-1">
             <div className="offset-card">
-              <div className="text-lg font-bold mb-3">HOW IT WORKS:</div>
+              <div className="text-lg font-bold mb-3 bg-[#ffd21f] text-black border-2 border-black px-3 py-1 inline-block -rotate-2">HOW IT WORKS:</div>
               <ol className="space-y-2 text-sm font-bold">
                 <li>1. Read the sentence carefully</li>
                 <li>2. Type it as accurately (or chaotically) as you wish</li>
