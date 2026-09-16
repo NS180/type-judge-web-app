@@ -2,7 +2,7 @@
 
 export function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b-4 border-black">
+    <nav className="navbar sticky top-0 z-50 bg-white border-b-4 border-black">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="brand-mark" aria-hidden="true">⌨</div>

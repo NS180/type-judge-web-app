@@ -11,7 +11,7 @@
   --color-purple: #8d6be8;
   --color-blue: #73b9ea;
   --color-yellow: #ffd84d;
-  --color-pink: #f39bc7;
+  --color-pink: #ed78b2;
   --color-green: #62d99a;
   --color-orange: #ff9b68;
   --color-coral: #f47f83;
@@ -35,6 +35,7 @@ html {
 body {
   @apply text-black font-sans;
   background: var(--color-cream);
+  background-image: radial-gradient(circle at 8% 18%, rgba(237, 120, 178, 0.12) 0 0.45rem, transparent 0.5rem), radial-gradient(circle at 92% 74%, rgba(141, 107, 232, 0.1) 0 0.35rem, transparent 0.4rem);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
 }
 
@@ -73,6 +74,9 @@ body {
 .keyboard-row { display: flex; gap: 0.4rem; width: 100%; justify-content: center; }
 .keyboard-row i, .keyboard-row b { display: block; height: 1.35rem; flex: 1; max-width: 3.2rem; background: #fffdf7; border: 3px solid var(--color-black); border-radius: 0.35rem; box-shadow: 2px 2px 0 var(--color-black); }
 .keyboard-row b { flex: 2.4; background: var(--color-pink); }
+.keyboard-row:nth-of-type(2) i:nth-child(3) { background: var(--color-lilac); }
+.keyboard-row:nth-of-type(3) i:nth-child(1) { background: var(--color-blue); }
+.keyboard-mascot::after { content: 'CLICK!'; position: absolute; right: -1.9rem; bottom: -1rem; padding: 0.25rem 0.45rem; background: var(--color-pink); border: 2px solid var(--color-black); border-radius: 0.4rem; box-shadow: 2px 2px 0 var(--color-black); font-size: 0.62rem; font-weight: 900; transform: rotate(8deg); }
 
 .typing-mascot { display: inline-block; }
 
@@ -81,6 +85,7 @@ body {
   .keyboard-eye { width: 2.35rem; height: 3.1rem; top: -1.25rem; }
   .keyboard-eye::after { width: 0.6rem; height: 1rem; left: 0.7rem; top: 0.9rem; }
   .keyboard-row i, .keyboard-row b { height: 1rem; border-width: 2px; }
+  .keyboard-mascot::after { right: -0.35rem; bottom: -1.1rem; font-size: 0.55rem; }
   .hero-widget { font-size: 0.62rem; padding: 0.3rem 0.45rem; border-width: 2px; box-shadow: 2px 2px 0 var(--color-black); }
   .hero-widget { display: none; }
   .hero-spark { font-size: 1.25rem; }
@@ -147,8 +152,10 @@ body {
   border-radius: 50%;
 }
 
-.brand-name { letter-spacing: -0.04em; }
+.brand-name { letter-spacing: -0.04em; position: relative; }
 .brand-name em { color: var(--color-pink); font-style: normal; }
+.brand-name::after { content: '✦'; position: absolute; right: -1rem; top: -0.75rem; color: var(--color-purple); font-size: 0.9rem; transform: rotate(14deg); }
+.navbar { box-shadow: 0 4px 0 var(--color-pink); }
 
 .hero-doodle {
   position: absolute;
@@ -175,6 +182,8 @@ h3 {
 }
 
 /* Comic-style thick outlines */
+.headline-pink { color: var(--color-pink); }
+
 .comic-outline {
   text-shadow: 
     -2px -2px 0 var(--color-black),

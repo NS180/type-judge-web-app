@@ -12,7 +12,7 @@ export function Hero() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8 md:mb-12 px-2">
           <h1 className="text-5xl md:text-7xl font-black mb-4 comic-outline">
-            YOUR TYPING<br/>PERSONALITY AWAITS
+            YOUR TYPING<br/><span className="headline-pink">PERSONALITY</span> AWAITS
           </h1>
           <p className="text-xl md:text-2xl font-bold text-black max-w-2xl mx-auto">
             Type a sentence and discover how your fingers betray your true nature.
