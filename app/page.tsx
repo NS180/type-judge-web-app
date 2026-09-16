@@ -7,6 +7,7 @@ import { TypingTest } from '@/components/TypingTest'
 import { StatsDashboard } from '@/components/StatsDashboard'
 import { About } from '@/components/About'
 import { Footer } from '@/components/Footer'
+import { AccountPanels } from '@/components/AccountPanels'
 
 export default function Page() {
   const [activeSection, setActiveSection] = useState('home')
@@ -27,6 +28,7 @@ export default function Page() {
         <section id="stats">
           <StatsDashboard />
         </section>
+        <AccountPanels />
         <About />
       </main>
       <Footer />

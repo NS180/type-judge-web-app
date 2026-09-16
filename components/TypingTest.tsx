@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { getRandomMainSentence } from '@/lib/sentences';
+import { getRandomSentence, getRandomMainSentence, SPEED_MODE_SENTENCES, ZEN_MODE_SENTENCES, CHAOS_MODE_SENTENCES, MEME_MODE_SENTENCES } from '@/lib/sentences';
+import { saveTypingAttempt } from '@/app/actions/typing';
 import { analyzeTyping, calculateWPM, calculateAccuracy, saveTest, generateTestId } from '@/lib/typing-utils';
 import { classifyPersonality, PERSONALITIES } from '@/lib/personalities';
 import { SentenceDisplay } from './SentenceDisplay';
@@ -9,7 +10,12 @@ import { LiveStats } from './LiveStats';
 import { PersonalityResult } from './PersonalityResult';
 
 export function TypingTest() {
+  const [mode, setMode] = useState('classic');
   const [sentence, setSentence] = useState<string>('');
+  const getSentenceForMode = (nextMode = mode) => {
+    const pool = nextMode === 'speed' ? SPEED_MODE_SENTENCES : nextMode === 'zen' ? ZEN_MODE_SENTENCES : nextMode === 'chaos' ? CHAOS_MODE_SENTENCES : nextMode === 'meme' ? MEME_MODE_SENTENCES : null;
+    return pool ? getRandomSentence(pool) : getRandomMainSentence();
+  };
   const [typed, setTyped] = useState<string>('');
   const [startTime, setStartTime] = useState<number | null>(null);
   const [timeSeconds, setTimeSeconds] = useState<number>(0);
@@ -23,7 +29,7 @@ export function TypingTest() {
 
   // Initialize test
   useEffect(() => {
-    setSentence(getRandomMainSentence());
+    setSentence(getSentenceForMode());
   }, []);
 
   // Timer
@@ -93,11 +99,12 @@ export function TypingTest() {
     };
 
     saveTest(test);
+    void saveTypingAttempt({ mode, wpm: metrics.wpm, accuracy: metrics.accuracy, errors: metrics.errors, backspaces: backspaceCount, consistency: metrics.consistency, durationMs: Math.round(timeSeconds * 1000), personality: personality.name }).catch(() => undefined);
     setTestResult({ personality, metrics, verdict });
   };
 
   const resetTest = () => {
-    setSentence(getRandomMainSentence());
+    setSentence(getSentenceForMode());
     setTyped('');
     setStartTime(null);
     setTimeSeconds(0);
@@ -151,6 +158,9 @@ export function TypingTest() {
         ) : (
           <div>
             <h2 className="text-4xl font-black mb-8 text-center">TYPE THIS:</h2>
+            <div className="mode-picker" aria-label="Typing modes">
+              {[['classic', 'Classic'], ['speed', 'Speed'], ['zen', 'Zen'], ['chaos', 'Chaos'], ['meme', 'Meme']].map(([id, label]) => <button key={id} type="button" className={`mode-chip ${mode === id ? 'active' : ''}`} onClick={() => { setMode(id); setSentence(getSentenceForMode(id)); setTyped(''); setStartTime(null); setTimeSeconds(0); setIsComplete(false); }}>{label}</button>)}
+            </div>
             
             <div
               ref={inputRef}
