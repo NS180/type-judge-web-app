@@ -2,15 +2,19 @@
 
 export function Hero() {
   return (
-    <section className="relative py-12 md:py-20 px-4 bg-[#5548f5] text-white border-b-4 border-black">
+    <section className="relative py-12 md:py-20 px-4 bg-[#f7f2e8] text-black border-b-4 border-black">
       <span className="hero-spark hero-spark-one" aria-hidden="true">✦</span>
       <span className="hero-spark hero-spark-two" aria-hidden="true">✶</span>
+      <span className="hero-widget hero-widget-one" aria-hidden="true">100% REAL</span>
+      <span className="hero-widget hero-widget-two" aria-hidden="true">TYPE VIBES</span>
+      <span className="hero-widget hero-widget-three" aria-hidden="true">NO CHEATING</span>
+      <span className="hero-doodle hidden md:block" style={{ top: '28%', left: '44%' }} aria-hidden="true">✦</span>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-7xl font-black mb-4 comic-outline">
             YOUR TYPING<br/>PERSONALITY AWAITS
           </h1>
-          <p className="text-xl md:text-2xl font-bold text-white max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl font-bold text-black max-w-2xl mx-auto">
             Type a sentence and discover how your fingers betray your true nature.
           </p>
         </div>
