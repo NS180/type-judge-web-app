@@ -66,8 +66,12 @@ body {
 .mode-picker { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin: -1rem auto 2rem; }
 .mode-chip { border: 3px solid var(--color-black); background: #fffdf7; border-radius: 999px; padding: 0.5rem 0.9rem; font-weight: 900; box-shadow: 3px 3px 0 var(--color-black); cursor: pointer; }
 .mode-chip.active { background: var(--color-pink); transform: translateY(2px); box-shadow: 1px 1px 0 var(--color-black); }
-.account-panels { background: #f7f2e8; }
+.account-panels { width: 100%; background: #f7f2e8; border-block: 4px solid var(--color-black); }
+.account-inner { position: relative; }
 .account-header { display: flex; justify-content: space-between; align-items: end; gap: 1rem; margin-bottom: 2rem; }
+.account-header h2 { max-width: 34rem; line-height: .95; }
+.account-panels .section-label { display: inline-block; margin-bottom: .6rem; background: var(--color-pink); }
+.account-panels .offset-card { min-height: 100%; }
 .dashboard-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
 .dashboard-card { min-height: 16rem; }
 .dashboard-card h3 { font-size: 1.5rem; font-weight: 950; margin-bottom: 1rem; }
@@ -77,7 +81,7 @@ body {
 .muted { margin-top: 1rem; color: #544f5c; font-weight: 700; }
 .account-callout { background: #ffddec; text-align: center; padding: 2.5rem; }
 .account-callout h3 { font-size: 2rem; font-weight: 950; }
-@media (max-width: 640px) { .account-header { align-items: start; flex-direction: column; } .dashboard-grid { grid-template-columns: 1fr; } .account-callout h3 { font-size: 1.5rem; } }
+@media (max-width: 640px) { .account-header { align-items: start; flex-direction: column; } .account-header h2 { font-size: 2.25rem; } .dashboard-grid { grid-template-columns: 1fr; } .account-callout h3 { font-size: 1.5rem; } }
 
 #about {
   background: #eee7ff;
