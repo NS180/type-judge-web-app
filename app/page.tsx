@@ -26,11 +26,11 @@ export default function Page() {
         <section id="home">
           <Hero onStart={() => scrollTo('test')} />
         </section>
+        <AccountPanels />
         <TypingTest />
         <section id="stats">
           <StatsDashboard />
         </section>
-        <AccountPanels />
         <About />
       </main>
       <Footer />
