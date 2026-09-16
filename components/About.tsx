@@ -4,7 +4,7 @@ export function About() {
   return (
     <section id="about" className="py-12 px-4 bg-gradient-to-b from-purple-100 to-pink-100">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-black mb-8 text-center">ABOUT TYPE JUDGE</h2>
+        <h2 className="section-title text-4xl font-black mb-8 text-center"><span aria-hidden="true">●</span> ABOUT TYPE JUDGE <span aria-hidden="true">●</span></h2>
 
         <div className="grid md:grid-cols-2 gap-8">
           <div className="offset-card">

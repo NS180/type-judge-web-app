@@ -41,7 +41,7 @@ export function StatsDashboard() {
   return (
     <section id="stats" className="py-12 px-4 bg-orange-50">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-black mb-8 text-center">YOUR STATS</h2>
+        <h2 className="section-title text-4xl font-black mb-8 text-center"><span aria-hidden="true">✦</span> YOUR STATS <span aria-hidden="true">✦</span></h2>
 
         {/* Main stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">

@@ -49,6 +49,26 @@ body {
   background: var(--color-cream);
 }
 
+#stats {
+  background: #fff3dc;
+}
+
+#about {
+  background: #eee7ff;
+}
+
+#stats .offset-card:nth-child(1) { background: #d9f7e5; }
+#stats .offset-card:nth-child(2) { background: #dceeff; }
+#stats .offset-card:nth-child(3) { background: #eadfff; }
+#stats .offset-card:nth-child(4) { background: #ffddec; }
+#stats .offset-card:nth-child(5) { background: #fffdf7; }
+#stats .offset-card:nth-child(6) { background: #fffdf7; }
+#stats .sticker { background: #ffe477; }
+#about .offset-card:nth-child(1) { background: #fff0b8; }
+#about .offset-card:nth-child(2) { background: #dff6e8; }
+#about .offset-card:nth-child(3) { background: #ffdcea; }
+#about .offset-card:nth-child(4) { background: #dceeff; }
+
 .keyboard-mascot {
   position: relative;
   display: inline-flex;
@@ -160,6 +180,8 @@ body {
 .brand-name { letter-spacing: -0.04em; position: relative; }
 .nav-pill { padding: 0.45rem 0.8rem; border-radius: 999px; transition: background 160ms ease, color 160ms ease; }
 .nav-pill:hover { background: var(--color-pink); color: var(--color-black); text-decoration: none; }
+.section-title span:first-child { color: var(--color-pink-deep); }
+.section-title span:last-child { color: var(--color-purple); }
 .hero-sticker { position: absolute; right: 10%; top: 10%; z-index: 2; padding: 0.7rem 0.85rem; color: var(--color-black); background: var(--color-pink); border: 3px solid var(--color-black); border-radius: 48% 52% 45% 55%; box-shadow: 4px 4px 0 var(--color-black); font-size: 0.9rem; font-weight: 950; transform: rotate(11deg); }
 @media (max-width: 640px) { .hero-sticker { display: none; } }
 .brand-name em { color: var(--color-pink); font-style: normal; }
