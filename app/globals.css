@@ -293,8 +293,6 @@ body {
 .brand-name { letter-spacing: -0.04em; position: relative; }
 .nav-pill { padding: 0.45rem 0.8rem; border-radius: 999px; transition: background 160ms ease, color 160ms ease; }
 .nav-pill:hover { background: var(--color-pink); color: var(--color-black); text-decoration: none; }
-.account-nav-link { padding: .45rem .75rem; background: var(--color-yellow); border: 2px solid var(--color-black); border-radius: 999px; box-shadow: 2px 2px 0 var(--color-black); }
-.account-nav-link:hover { background: var(--color-pink); text-decoration: none; }
 .section-title span:first-child { color: var(--color-pink-deep); }
 .section-title span:last-child { color: var(--color-purple); }
 .hero-sticker { position: absolute; right: 10%; top: 10%; z-index: 2; padding: 0.7rem 0.85rem; color: var(--color-black); background: var(--color-pink); border: 3px solid var(--color-black); border-radius: 48% 52% 45% 55%; box-shadow: 4px 4px 0 var(--color-black); font-size: 0.9rem; font-weight: 950; transform: rotate(11deg); }
