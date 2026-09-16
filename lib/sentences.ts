@@ -67,6 +67,17 @@ export const MEME_MODE_SENTENCES = [
   'I am not late, I am just early for tomorrow.',
 ];
 
+export const LONG_SENTENCES = [
+  'The best developers are not the ones who know every answer. They are the ones who stay curious, ask better questions, and keep improving when the first solution does not work.',
+  'A great product is built one thoughtful decision at a time, from the first rough idea to the tiny details that make people smile when they use it.',
+  'Debugging teaches patience because the smallest missing character can hide inside a much larger problem, waiting for someone brave enough to slow down and look closely.',
+  'Your typing style says more than your speed. It reveals how you handle pressure, mistakes, repetition, uncertainty, and the occasional keyboard key that refuses to cooperate.',
+  'There is no perfect workflow, only a better next step. Make the change, test the result, learn from the mess, and try again with slightly more confidence.',
+  'The internet remembers everything except the brilliant idea you had five minutes ago, so write it down before another notification steals your attention.',
+  'Sometimes the fastest route is to pause, read the error message carefully, and admit that the computer has been trying to tell you exactly what went wrong.',
+  'A calm mind can type through a difficult problem, a chaotic mind can discover an unexpected solution, and both are allowed to take a snack break afterward.',
+];
+
 export const ZEN_MODE_SENTENCES = [
   'Breathe in slowly and type with intention.',
   'Each keystroke is a moment of stillness.',
